@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowJs": true,
+  },
+  "include": ["src"]
+}
