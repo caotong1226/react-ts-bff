@@ -1,6 +1,8 @@
 class IndexService {
   getData() {
-    return Promise.resolve("测试");
+    return Promise.resolve({
+      item: "后台数据🌺",
+    });
   }
 }
 export default IndexService;

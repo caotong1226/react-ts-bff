@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel client:dev server:dev server:start",
-    "server:start": "cross-env NODE_ENV=development supervisor -i ./dist/client/ -w ./dist/ ./dist/app.js",
+    "server:start": "cross-env NODE_ENV=development nodemon -i ./dist/client/ -w ./dist/ ./dist/app.js",
     "server:dev": "scripty",
     "server:prod": "scripty",
     "client:dev": "scripty",
@@ -14,12 +14,13 @@
     "karma:test": "karma start",
     "backstop:test": "backstop test",
     "e2e:test": "node ./test/e2e/*.js",
-    "mocha:test":"node ./mochaRunner.js"
+    "mocha:test": "node ./mochaRunner.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@koa/router": "^8.0.8",
     "axios": "^0.21.1",
     "co": "^4.6.0",
     "koa": "^2.13.1",
@@ -60,6 +61,7 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "mocha": "^8.3.0",
     "mochawesome": "^6.2.2",
+    "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
     "phantomjs": "^2.1.7",
     "scripty": "^2.0.0",
